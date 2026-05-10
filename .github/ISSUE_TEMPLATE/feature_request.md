@@ -1,20 +1,24 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+name: ✨ Feature Request
+description: Neue Funktion vorschlagen
+labels: ["type:feat", "priority:normal"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: Welches Problem löst dieses Feature?
+    validations:
+      required: true
 
----
+  - type: textarea
+    id: solution
+    attributes:
+      label: Gewünschte Lösung
+    validations:
+      required: true
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+  - type: dropdown
+    id: phase
+    attributes:
+      label: MVP Phase
+      options: ["Phase 0", "Phase A", "Phase B", "Phase C", "Phase D", "Phase E", "Phase F", "MVP 2+"]
